@@ -1,0 +1,9 @@
+*~
+*#
+*.o
+*.log
+.DS_Store
+*.cogui
+*.comarker
+
+FreeRTOS-template-for-STM32F4
