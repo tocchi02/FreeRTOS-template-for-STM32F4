@@ -1,8 +1,6 @@
 #include "stm32f4xx.h"
 
 #include "stm32f4_discovery.h"
-#include "STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_tim.h"
-#include "STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_rcc.h"
 #include <math.h>
 
 #include "FreeRTOS/include/FreeRTOS.h"
