@@ -94,9 +94,7 @@
     <File name="STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_sdio.h" path="STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_sdio.h" type="1"/>
     <File name="STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_pwr.h" path="STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_pwr.h" type="1"/>
     <File name="STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.c" path="STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.c" type="1"/>
-    <File name="FreeRTOS/portable/GCC/ARM_CM4F" path="" type="2"/>
     <File name="STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dbgmcu.h" path="STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dbgmcu.h" type="1"/>
-    <File name="stm32f4_discovery_audio_codec/stm32f4_discovery_audio_codec.c" path="stm32f4_discovery_audio_codec/stm32f4_discovery_audio_codec.c" type="1"/>
     <File name="STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_adc.h" path="STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_adc.h" type="1"/>
     <File name="FreeRTOS/queue.c" path="FreeRTOS/queue.c" type="1"/>
     <File name="STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_cryp.h" path="STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_cryp.h" type="1"/>
@@ -127,7 +125,6 @@
     <File name="STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.c" path="STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.c" type="1"/>
     <File name="STM32F4xx_StdPeriph_Driver/src/stm32f4xx_pwr.c" path="STM32F4xx_StdPeriph_Driver/src/stm32f4xx_pwr.c" type="1"/>
     <File name="STM32F4xx_StdPeriph_Driver/src/stm32f4xx_hash.c" path="STM32F4xx_StdPeriph_Driver/src/stm32f4xx_hash.c" type="1"/>
-    <File name="stm32f4_discovery_audio_codec" path="" type="2"/>
     <File name="STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_wwdg.h" path="STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_wwdg.h" type="1"/>
     <File name="FreeRTOS/portable/readme.txt" path="FreeRTOS/portable/readme.txt" type="1"/>
     <File name="main.c" path="main.c" type="1"/>
@@ -163,7 +160,6 @@
     <File name="FreeRTOS/tasks.c" path="FreeRTOS/tasks.c" type="1"/>
     <File name="FreeRTOS/portable/GCC/ARM_CM4F/port.c" path="FreeRTOS/portable/GCC/ARM_CM4F/port.c" type="1"/>
     <File name="STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_rtc.h" path="STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_rtc.h" type="1"/>
-    <File name="stm32f4_discovery_audio_codec/stm32f4_discovery_audio_codec.h" path="stm32f4_discovery_audio_codec/stm32f4_discovery_audio_codec.h" type="1"/>
     <File name="STM32F4xx_StdPeriph_Driver/inc/misc.h" path="STM32F4xx_StdPeriph_Driver/inc/misc.h" type="1"/>
     <File name="FreeRTOS/include/list.h" path="FreeRTOS/include/list.h" type="1"/>
     <File name="FreeRTOS/include/portable.h" path="FreeRTOS/include/portable.h" type="1"/>

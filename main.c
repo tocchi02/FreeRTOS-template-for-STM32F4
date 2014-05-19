@@ -1,5 +1,4 @@
 #include "stm32f4xx.h"
-#include "stm32f4_discovery_audio_codec/stm32f4_discovery_audio_codec.h"
 
 #include "stm32f4_discovery.h"
 #include "STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_tim.h"
