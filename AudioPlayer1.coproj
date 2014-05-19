@@ -25,7 +25,7 @@
         <Option name="DiscardUnusedSections" value="1"/>
         <Option name="Library" value="Not use C Library"/>
         <LinkedLibraries>
-          <Libset dir="..\..\..\..\..\program files (x86)\gnu tools arm embedded\4.7 2013q2\arm-none-eabi\lib\armv7e-m\fpu\" libs="m"/>
+          <Libset dir="..\..\coocox\gcc-arm-none-eabi-4_8-2014q1-20140314-win32\arm-none-eabi\lib\armv7e-m\fpu\" libs="m"/>
         </LinkedLibraries>
         <MemoryAreas debugInFlashNotRAM="1">
           <Memory name="IROM1" type="ReadOnly" size="0x00100000" startValue="0x08000000"/>
