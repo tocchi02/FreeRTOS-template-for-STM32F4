@@ -13,7 +13,8 @@ uint64_t tickTime=0;        // Counts OS ticks (default = 1000Hz).
 void GPIO_A0_Init(void);
 
 void vButtonTask (void * pvparameters);
-
+void vToggleLED5Task (void *pvParameters);
+void vToggleLED6Task (void *pvParameters);
 
 /*
  * When FreeRTOS crashes, you often end up in a hard fault.
@@ -35,6 +36,8 @@ int main(void)
     STM_EVAL_PBInit(BUTTON_USER, BUTTON_MODE_GPIO);
 
 	xTaskCreate( vButtonTask, ( signed char * ) "Button Task", 100, NULL, 1, NULL );
+	xTaskCreate( vToggleLED5Task, (signed portCHAR *)"Toggle LED5 Task", 192, NULL, 1, NULL);
+	xTaskCreate( vToggleLED6Task, (signed portCHAR *)"Toggle LED6 Task", 192, NULL, 1, NULL);
 
     vTaskStartScheduler(); // This should never return.
 
@@ -67,6 +70,26 @@ void vButtonTask( void *pvparameters )
 		}
 
 		vTaskDelay(30 / portTICK_RATE_MS);
+	}
+}
+
+void vToggleLED5Task (void *pvParameters)
+{
+	int8_t *pcTaskName;
+	pcTaskName = (int8_t *) pvParameters;
+	while(1)
+	{
+		STM_EVAL_LEDToggle(LED5);
+	}
+}
+
+void vToggleLED6Task (void *pvParameters)
+{
+	int8_t *pcTaskName;
+	pcTaskName = (int8_t *) pvParameters;
+	while(1)
+	{
+		STM_EVAL_LEDToggle(LED6);
 	}
 }
 
