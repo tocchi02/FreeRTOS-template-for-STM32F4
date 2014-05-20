@@ -26,14 +26,34 @@ void HardFault_Handler (void){
 	STM_EVAL_LEDOn(LED6);
 }
 
-
-int main(void)
+/*-----------------------------------------------------------*/
+static void prvSetupHardware( void )
 {
+	/* Setup STM32 system (clock, PLL and Flash configuration) */
+	SystemInit();
+#if 0
+	/* Ensure all priority bits are assigned as preemption priority bits. */
+	NVIC_PriorityGroupConfig( NVIC_PriorityGroup_4 );
+
+	/* Setup the LED outputs. */
+	vParTestInitialise();
+
+	/* Configure the button input.  This configures the interrupt to use the
+	lowest interrupt priority, so it is ok to use the ISR safe FreeRTOS API
+	from the button interrupt handler. */
+	STM_EVAL_PBInit( BUTTON_USER, BUTTON_MODE_EXTI );
+#endif
 	STM_EVAL_LEDInit(LED3);
 	STM_EVAL_LEDInit(LED4);
 	STM_EVAL_LEDInit(LED5);
 	STM_EVAL_LEDInit(LED6);
     STM_EVAL_PBInit(BUTTON_USER, BUTTON_MODE_GPIO);
+}
+
+int main(void)
+{
+	/* Setup STM32 system (clock, PLL and Flash configuration) */
+	prvSetupHardware();
 
 	xTaskCreate( vButtonTask, ( signed char * ) "Button Task", 100, NULL, 1, NULL );
 	xTaskCreate( vToggleLED5Task, (signed portCHAR *)"Toggle LED5 Task", 192, NULL, 1, NULL);
@@ -80,7 +100,9 @@ void vToggleLED5Task (void *pvParameters)
 	while(1)
 	{
 		STM_EVAL_LEDToggle(LED5);
+		vTaskDelay(500 / portTICK_RATE_MS);
 	}
+
 }
 
 void vToggleLED6Task (void *pvParameters)
@@ -90,6 +112,7 @@ void vToggleLED6Task (void *pvParameters)
 	while(1)
 	{
 		STM_EVAL_LEDToggle(LED6);
+		vTaskDelay(1000 / portTICK_RATE_MS);
 	}
 }
 
