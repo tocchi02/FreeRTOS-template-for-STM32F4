@@ -16,6 +16,7 @@
           <Define name="STM32F4XX"/>
           <Define name="USE_STDPERIPH_DRIVER"/>
           <Define name="__FPU_USED"/>
+          <Define name="HSE_VALUE=8000000"/>
         </DefinedSymbols>
       </Compile>
       <Link useDefault="0">
