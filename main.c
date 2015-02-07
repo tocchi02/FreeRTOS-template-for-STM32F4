@@ -134,31 +134,3 @@ void vApplicationIdleHook( void ) {
 void vApplicationMallocFailedHook( void ) {
     configASSERT( 0 );  // Latch on any failure / error.
 }
-
-
-/*
- * Required callbacks for audio playback
- */
-uint16_t EVAL_AUDIO_GetSampleCallBack(void)
-{
-	return 1;
-}
-
-void EVAL_AUDIO_TransferComplete_CallBack(uint32_t pBuffer, uint32_t Size)
-{
-}
-
-void EVAL_AUDIO_HalfTransfer_CallBack(uint32_t pBuffer, uint32_t Size)
-{
-}
-
-void EVAL_AUDIO_Error_CallBack(void* pData)
-{
-	while(1);
-}
-
-uint32_t Codec_TIMEOUT_UserCallback(void)
-{
-	while(1);
-	return 1;
-}
